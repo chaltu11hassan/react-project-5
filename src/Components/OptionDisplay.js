@@ -12,16 +12,16 @@ const OptionDisplay = () => {
   const dispatch = useDispatch();
   return (
     <div className="stack">
-      {currentPotentials.map((e, index) => {
+      {currentPotentials.map((event, index) => {
         return (
           <h2
-            key={e.name.official}
+            key={event.name.official}
             className="country-option"
             onClick={() => {
               dispatch(setDisplayCountry(currentPotentials[index]));
             }}
           >
-            {e.name.common}
+            {event.name.common}
           </h2>
         );
       })}
